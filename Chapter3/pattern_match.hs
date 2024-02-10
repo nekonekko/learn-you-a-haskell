@@ -37,10 +37,10 @@ third (_, _, c) = c
 
 -- リストのパターンマッチ
 head' :: [a] -> a
-head' []      = error "Can't tell head on an empty list, dymmy!"
+head' [] = error "Can't tell head on an empty list, dymmy!"
 head' (x : _) = x
 
 -- as パターン
 firstLetter :: String -> String
-firstLetter ""        = "Empty string, whoops!"
+firstLetter "" = "Empty string, whoops!"
 firstLetter s@(x : _) = "The first letter of " ++ s ++ " is " ++ [x]
