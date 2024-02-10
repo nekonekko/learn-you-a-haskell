@@ -16,7 +16,7 @@ sayMe x = show x ++ " is not between 1 and 5!"
 -- Int ではなく0以上の整数に対して定義する必要あり
 factorial :: Int -> Int
 factorial 0 = 1
-factorial n = n * factorial(n - 1)
+factorial n = n * factorial (n - 1)
 
 -- ベクトルの足し算
 addVectors :: (Double, Double) -> (Double, Double) -> (Double, Double)
@@ -37,10 +37,10 @@ third (_, _, c) = c
 
 -- リストのパターンマッチ
 head' :: [a] -> a
-head' [] = error "Can't tell head on an empty list, dymmy!"
-head' (x:_) = x
+head' []      = error "Can't tell head on an empty list, dymmy!"
+head' (x : _) = x
 
 -- as パターン
 firstLetter :: String -> String
-firstLetter "" = "Empty string, whoops!"
-firstLetter s@(x:_) = "The first letter of " ++ s ++ " is " ++ [x]
+firstLetter ""        = "Empty string, whoops!"
+firstLetter s@(x : _) = "The first letter of " ++ s ++ " is " ++ [x]
